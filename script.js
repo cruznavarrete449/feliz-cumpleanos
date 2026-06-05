@@ -1,6 +1,16 @@
 function abrirSorpresa(){
 
-    let colores = [
+    document.getElementById("mensaje").style.display = "block";
+
+    document.getElementById("mensaje").style.animation = "aparecer 1s";
+
+    document.body.style.background = "#fff8dc";
+
+    document.getElementById("musica").play();
+
+}
+
+let colores = [
     "red",
     "blue",
     "green",
@@ -14,21 +24,12 @@ let indice = 0;
 
 function cambiarColor(){
 
-    let boton = document.getElementById("botonColor");
+    document.body.style.backgroundColor = colores[indice];
 
-    let color =
-    "#" + Math.floor(Math.random()*16777215).toString(16);
+    indice++;
 
-    boton.style.backgroundColor = color;
-
-}
-
-    document.getElementById("mensaje").style.display = "block";
-
-    document.getElementById("mensaje").style.animation = "aparecer 1s";
-
-    document.body.style.background = "#fff8dc";
-
-    document.getElementById("musica").play();
+    if(indice >= colores.length){
+        indice = 0;
+    }
 
 }
