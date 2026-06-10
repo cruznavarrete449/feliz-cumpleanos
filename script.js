@@ -1,5 +1,17 @@
 function abrirSorpresa(){
 
+        let nombre =
+    document.getElementById("nombre").value;
+
+    if(nombre == ""){
+
+        nombre = "Amigo";
+
+    }
+
+    document.getElementById("tituloCumple").innerHTML =
+    "🎉 ¡Feliz Cumpleaños " + nombre + "! 🎉";
+
     document.getElementById("mensaje").style.display = "block";
 
     document.getElementById("mensaje").style.animation = "aparecer 1s";
